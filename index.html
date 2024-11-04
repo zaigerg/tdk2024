@@ -1,1 +1,108 @@
-<HTML><BODY><P>Feltöltés alatt...</BODY></HTML>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Video Gallery</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Styling the page */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f9;
+            padding: 20px;
+        }
+
+        /* Header styling */
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 2em;
+            color: #333;
+        }
+
+        .header p {
+            font-size: 1em;
+            color: #777;
+        }
+
+        /* Container styling */
+        .video-gallery {
+            max-width: 1200px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            width: 100%;
+        }
+
+        /* Video iframe styling */
+        .video {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+        }
+
+        .video iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .video-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Page Header with Title and Author -->
+    <div class="header">
+        <h1>TDK 2024</h1>
+        <p><H2>Zainkó Gergő (9.A) és Zainkó Noémi Tímea (11.B)</h2>
+	<h1>FALMÁSZÁST SEGÍTŐ EDZÉSTÁMOGATÓ RENDSZER </h1>
+</p>
+    </div>
+
+    <!-- Video Gallery -->
+    <div class="video-gallery">
+        <!-- Video 1 -->
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/yQKeduHyQ4g" allowfullscreen></iframe>
+        </div>
+        
+        <!-- Video 2 -->
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" allowfullscreen></iframe>
+        </div>
+        
+        <!-- Video 3 -->
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" allowfullscreen></iframe>
+        </div>
+        
+        <!-- Video 4 -->
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID_4" allowfullscreen></iframe>
+        </div>
+    </div>
+</body>
+</html>
